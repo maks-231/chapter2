@@ -24,8 +24,8 @@ public class LicenseServiceController {
         return new License()
             .withId(licenseId)
             .withOrganizationId(organizationId)
-            .withProductName("Teleco")
-            .withLicenseType("Seat");
+            .withProductName("IPA")
+            .withLicenseType("Beer");
     }
 
     @RequestMapping(value="{licenseId}",method = RequestMethod.PUT)
