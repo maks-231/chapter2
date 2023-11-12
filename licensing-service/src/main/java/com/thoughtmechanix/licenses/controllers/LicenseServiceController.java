@@ -20,12 +20,7 @@ public class LicenseServiceController {
     public License getLicenses( @PathVariable("organizationId") String organizationId,
                                 @PathVariable("licenseId") String licenseId) {
 
-        //return licenseService.getLicense(licenseId);
-        return new License()
-            .withId(licenseId)
-            .withOrganizationId(organizationId)
-            .withProductName("IPA")
-            .withLicenseType("Beer");
+        return licenseService.getLicense(licenseId);
     }
 
     @RequestMapping(value="{licenseId}",method = RequestMethod.PUT)
