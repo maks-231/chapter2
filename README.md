@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Introduction
 Welcome to Spring Microservices in Action, Chapter 2.  Chapter 2 focuses on what exactly is a microservice and goes into more detail on how to build a microservice using Spring Boot.  This chapter in this code focuses on building a single service called the licensing service.  After you have compiled and started the code you should have a service called the licensing service up and running.
 
@@ -26,4 +25,3 @@ change to the directory containing  your chapter 2 source code.  Issue the follo
 If everything starts correctly you should see a bunch of Spring Boot information fly by on standard out.  At this point all of the services needed for the chapter code examples will be running.
 =======
 # chapter2
->>>>>>> 86397046f69461df89fcba3a9b9c5af14f1cb70d
