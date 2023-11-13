@@ -16,6 +16,12 @@ public class LicenseServiceController {
     @Autowired
     private LicenseService licenseService;
 
+    /**
+     * The function generated nd returns License DTO
+     * @param organizationId
+     * @param licenseId
+     * @return
+     */
     @RequestMapping(value="/{licenseId}",method = RequestMethod.GET)
     public License getLicenses( @PathVariable("organizationId") String organizationId,
                                 @PathVariable("licenseId") String licenseId) {
