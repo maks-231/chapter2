@@ -23,6 +23,9 @@ public class LicenseServiceController {
         return licenseService.getLicense(licenseId);
     }
 
+    /**
+     * todo: This function is not used, but ib the future will be.
+     */
     @RequestMapping(value="{licenseId}",method = RequestMethod.PUT)
     public String updateLicenses( @PathVariable("licenseId") String licenseId) {
         return String.format("This is the put");
