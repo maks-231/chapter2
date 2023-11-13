@@ -29,17 +29,17 @@ public class LicenseServiceController {
 
     @RequestMapping(value="{licenseId}",method = RequestMethod.PUT)
     public String updateLicenses( @PathVariable("licenseId") String licenseId) {
-        return String.format("This is the put");
+        return String.format("REST API GET");
     }
 
     @RequestMapping(value="{licenseId}",method = RequestMethod.POST)
     public String saveLicenses( @PathVariable("licenseId") String licenseId) {
-        return String.format("This is the post");
+        return String.format("REST API POST");
     }
 
     @RequestMapping(value="{licenseId}",method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public String deleteLicenses( @PathVariable("licenseId") String licenseId) {
-        return String.format("This is the Delete");
+        return String.format("REST API DELETE");
     }
 }
