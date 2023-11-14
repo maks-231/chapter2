@@ -26,23 +26,6 @@ public class LicenseServiceController {
     }
 
     /**
-     * The function generated nd returns License DTO
-     * @param organizationId
-     * @param licenseId
-     * @return
-     */
-    @RequestMapping(value="/{licenseId}",method = RequestMethod.GET)
-    public License getLicenses( @PathVariable("organizationId") String organizationId,
-                                @PathVariable("licenseId") String licenseId) {
-
-        return new License()
-                .withId(licenseId)
-                .withOrganizationId(organizationId)
-                .withProductName("IPA")
-                .withLicenseType("Beer");
-    }
-
-    /**
      * todo: This function is not used, but ib the future will be.
      */
     @RequestMapping(value="{licenseId}",method = RequestMethod.DELETE)
@@ -57,5 +40,22 @@ public class LicenseServiceController {
     @RequestMapping(value="{licenseId}",method = RequestMethod.POST)
     public String saveLicenses( @PathVariable("licenseId") String licenseId) {
         return String.format("REST API POST");
+    }
+
+    /**
+     * The function generated nd returns License DTO
+     * @param organizationId
+     * @param licenseId
+     * @return
+     */
+    @RequestMapping(value="/{licenseId}",method = RequestMethod.GET)
+    public License getLicenses( @PathVariable("organizationId") String organizationId,
+                                @PathVariable("licenseId") String licenseId) {
+
+        return new License()
+                .withId(licenseId)
+                .withOrganizationId(organizationId)
+                .withProductName("IPA")
+                .withLicenseType("Beer");
     }
 }
