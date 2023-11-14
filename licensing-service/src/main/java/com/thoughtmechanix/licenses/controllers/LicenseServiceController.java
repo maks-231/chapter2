@@ -16,13 +16,13 @@ import javax.annotation.Resource;
 public class LicenseServiceController {
     @Resource
     private LicenseService licenseService;
-
+    
     /**
      * todo: This function is not used, but ib the future will be.
      */
-    @RequestMapping(value="{licenseId}",method = RequestMethod.PUT)
-    public String updateLicenses( @PathVariable("licenseId") String licenseId) {
-        return String.format("REST API GET");
+    @RequestMapping(value="{licenseId}",method = RequestMethod.POST)
+    public String saveLicenses( @PathVariable("licenseId") String licenseId) {
+        return String.format("REST API POST");
     }
 
     /**
@@ -34,12 +34,13 @@ public class LicenseServiceController {
         return String.format("REST API DELETE");
     }
 
+
     /**
      * todo: This function is not used, but ib the future will be.
      */
-    @RequestMapping(value="{licenseId}",method = RequestMethod.POST)
-    public String saveLicenses( @PathVariable("licenseId") String licenseId) {
-        return String.format("REST API POST");
+    @RequestMapping(value="{licenseId}",method = RequestMethod.PUT)
+    public String updateLicenses( @PathVariable("licenseId") String licenseId) {
+        return String.format("REST API GET");
     }
 
     /**
