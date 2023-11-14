@@ -1,6 +1,8 @@
 package com.thoughtmechanix.licenses.model;
 
-
+/**
+ * The License class is an DTO.
+ */
 public class License{
   private String id;
   private String organizationId;
@@ -58,7 +60,4 @@ public class License{
     this.setLicenseType(licenseType);
     return this;
   }
-
-
-
 }
