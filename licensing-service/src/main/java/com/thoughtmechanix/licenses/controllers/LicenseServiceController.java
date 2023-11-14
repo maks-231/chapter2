@@ -16,6 +16,14 @@ import javax.annotation.Resource;
 public class LicenseServiceController {
     @Resource
     private LicenseService licenseService;
+    
+    /**
+     * todo: This function is not used, but ib the future will be.
+     */
+    @RequestMapping(value="{licenseId}",method = RequestMethod.POST)
+    public String saveLicenses( @PathVariable("licenseId") String licenseId) {
+        return String.format("REST API POST");
+    }
 
     /**
      * todo: This function is not used, but ib the future will be.
@@ -42,13 +50,6 @@ public class LicenseServiceController {
                 .withProductName("IPA")
                 .withLicenseType("Beer");
     }
-    /**
-     * todo: This function is not used, but ib the future will be.
-     */
-    @RequestMapping(value="{licenseId}",method = RequestMethod.POST)
-    public String saveLicenses( @PathVariable("licenseId") String licenseId) {
-        return String.format("REST API POST");
-    }
 
     /**
      * todo: This function is not used, but ib the future will be.
@@ -57,6 +58,4 @@ public class LicenseServiceController {
     public String updateLicenses( @PathVariable("licenseId") String licenseId) {
         return String.format("REST API GET");
     }
-
-
 }
