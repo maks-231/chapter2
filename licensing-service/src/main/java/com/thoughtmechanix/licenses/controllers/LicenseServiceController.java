@@ -18,6 +18,15 @@ public class LicenseServiceController {
     private LicenseService licenseService;
 
     /**
+     * todo: This function is not used, but ib the future will be.
+     */
+    @RequestMapping(value="{licenseId}",method = RequestMethod.DELETE)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public String deleteLicenses( @PathVariable("licenseId") String licenseId) {
+        return String.format("REST API DELETE");
+    }
+
+    /**
      * The function generated nd returns License DTO
      * @param organizationId
      * @param licenseId
@@ -33,16 +42,6 @@ public class LicenseServiceController {
                 .withProductName("IPA")
                 .withLicenseType("Beer");
     }
-
-    /**
-     * todo: This function is not used, but ib the future will be.
-     */
-    @RequestMapping(value="{licenseId}",method = RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public String deleteLicenses( @PathVariable("licenseId") String licenseId) {
-        return String.format("REST API DELETE");
-    }
-
     /**
      * todo: This function is not used, but ib the future will be.
      */
