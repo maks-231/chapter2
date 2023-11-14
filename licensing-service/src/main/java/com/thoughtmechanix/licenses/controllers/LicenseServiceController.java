@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 public class LicenseServiceController {
     @Resource
     private LicenseService licenseService;
-    
+            
     /**
      * todo: This function is not used, but ib the future will be.
      */
