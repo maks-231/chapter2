@@ -18,6 +18,14 @@ public class LicenseServiceController {
     private LicenseService licenseService;
 
     /**
+     * todo: This function is not used, but ib the future will be.
+     */
+    @RequestMapping(value="{licenseId}",method = RequestMethod.PUT)
+    public String updateLicenses( @PathVariable("licenseId") String licenseId) {
+        return String.format("REST API GET");
+    }
+
+    /**
      * The function generated nd returns License DTO
      * @param organizationId
      * @param licenseId
@@ -37,9 +45,10 @@ public class LicenseServiceController {
     /**
      * todo: This function is not used, but ib the future will be.
      */
-    @RequestMapping(value="{licenseId}",method = RequestMethod.PUT)
-    public String updateLicenses( @PathVariable("licenseId") String licenseId) {
-        return String.format("REST API GET");
+    @RequestMapping(value="{licenseId}",method = RequestMethod.DELETE)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public String deleteLicenses( @PathVariable("licenseId") String licenseId) {
+        return String.format("REST API DELETE");
     }
 
     /**
@@ -48,14 +57,5 @@ public class LicenseServiceController {
     @RequestMapping(value="{licenseId}",method = RequestMethod.POST)
     public String saveLicenses( @PathVariable("licenseId") String licenseId) {
         return String.format("REST API POST");
-    }
-
-    /**
-     * todo: This function is not used, but ib the future will be.
-     */
-    @RequestMapping(value="{licenseId}",method = RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public String deleteLicenses( @PathVariable("licenseId") String licenseId) {
-        return String.format("REST API DELETE");
     }
 }
