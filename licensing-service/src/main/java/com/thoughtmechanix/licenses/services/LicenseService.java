@@ -17,15 +17,15 @@ public class LicenseService {
     }
 
     public void saveLicense(License license){
-
+        // an empty function
     }
 
     public void updateLicense(License license){
-
+        // an empty function
     }
 
     public void deleteLicense(License license){
-
+        // an empty function
     }
 
 }
