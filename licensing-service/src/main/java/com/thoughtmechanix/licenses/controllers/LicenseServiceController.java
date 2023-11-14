@@ -20,18 +20,18 @@ public class LicenseServiceController {
     /**
      * todo: This function is not used, but ib the future will be.
      */
-    @RequestMapping(value="{licenseId}",method = RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public String deleteLicenses( @PathVariable("licenseId") String licenseId) {
-        return String.format("REST API DELETE");
+    @RequestMapping(value="{licenseId}",method = RequestMethod.POST)
+    public String saveLicenses( @PathVariable("licenseId") String licenseId) {
+        return String.format("REST API POST");
     }
 
     /**
      * todo: This function is not used, but ib the future will be.
      */
-    @RequestMapping(value="{licenseId}",method = RequestMethod.POST)
-    public String saveLicenses( @PathVariable("licenseId") String licenseId) {
-        return String.format("REST API POST");
+    @RequestMapping(value="{licenseId}",method = RequestMethod.DELETE)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public String deleteLicenses( @PathVariable("licenseId") String licenseId) {
+        return String.format("REST API DELETE");
     }
 
     /**
