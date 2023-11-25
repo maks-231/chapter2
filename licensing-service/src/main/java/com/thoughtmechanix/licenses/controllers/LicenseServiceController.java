@@ -22,15 +22,17 @@ public class LicenseServiceController {
      */
     @RequestMapping(value="{licenseId}",method = RequestMethod.POST)
     public String saveLicenses( @PathVariable("licenseId") String licenseId) {
+        // todo: Deleting functionality should be added. 
         return String.format("REST API POST");
     }
 
     /**
-     * todo: This function is not used, but ib the future will be.
+     * todo: This function is not used, but id the future will be.
      */
     @RequestMapping(value="{licenseId}",method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public String deleteLicenses( @PathVariable("licenseId") String licenseId) {
+        // todo: Deleting functionality should be added.
         return String.format("REST API DELETE");
     }
 
