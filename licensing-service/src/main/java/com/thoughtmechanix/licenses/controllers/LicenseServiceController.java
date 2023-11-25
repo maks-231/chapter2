@@ -22,6 +22,7 @@ public class LicenseServiceController {
      */
     @RequestMapping(value="{licenseId}",method = RequestMethod.POST)
     public String saveLicenses( @PathVariable("licenseId") String licenseId) {
+        //todo: Empty function
         return String.format("REST API POST");
     }
 
@@ -31,6 +32,7 @@ public class LicenseServiceController {
     @RequestMapping(value="{licenseId}",method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public String deleteLicenses( @PathVariable("licenseId") String licenseId) {
+        //todo: Empty function
         return String.format("REST API DELETE");
     }
 
