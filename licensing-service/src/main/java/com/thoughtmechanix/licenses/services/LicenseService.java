@@ -20,6 +20,7 @@ public class LicenseService {
      */
     public void saveLicense(License license){
         // an empty function
+        // add some functionality
     }
 
     /**
