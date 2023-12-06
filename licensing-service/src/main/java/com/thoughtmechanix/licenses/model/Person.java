@@ -7,6 +7,9 @@ import lombok.Setter;
 @Setter
 @Getter
 @Builder
+/**
+ * Person class
+ */
 public class Person {
     private long id;
     private String name;
