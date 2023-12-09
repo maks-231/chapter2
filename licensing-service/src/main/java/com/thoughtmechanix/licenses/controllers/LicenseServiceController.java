@@ -11,13 +11,16 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import javax.annotation.Resource;
 
+/**
+ * LicenseServiceController class contains endpoints
+ */
 @RestController
 @RequestMapping(value="v1/organizations/{organizationId}/licenses")
 public class LicenseServiceController {
     // some comment
     @Resource
     private LicenseService licenseService;
-                                                            
+
     /**
      * todo: This function is not used, but ib the future will be.
      */

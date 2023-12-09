@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 import java.util.UUID;
 
 @Service
+/**
+ * Licence service
+ */
 public class LicenseService {
     public License getLicense(String licenseId){
         return new License()
