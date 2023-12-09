@@ -2,6 +2,8 @@ package com.thoughtmechanix.licenses.controllers;
 
 import com.thoughtmechanix.licenses.model.License;
 import com.thoughtmechanix.licenses.services.LicenseService;
+import lombok.extern.log4j.Log4j2;
+import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,16 +18,25 @@ import javax.annotation.Resource;
  */
 @RestController
 @RequestMapping(value="v1/organizations/{organizationId}/licenses")
+@Log4j2
 public class LicenseServiceController {
     @Resource
     private LicenseService licenseService;
 
     /**
-     * todo: This function is not used, but ib the future will be.
+     * todo: This function is not used, but in the future will be.
      */
     @RequestMapping(value="{licenseId}",method = RequestMethod.POST)
     public String saveLicenses( @PathVariable("licenseId") String licenseId) {
+        log.info("saveLicenses started");
+        Assert.isNull(licenseId, "Object licenseId cannot be null");
+        try{
+            //someService.save(licenseId);
+        } catch (Exception e){
+            log.warn("licenseId was not saved");
+        }
         // todo: Deleting functionality should be added.
+        log.info("saveLicenses ended");
         return String.format("REST API POST");
     }
 
