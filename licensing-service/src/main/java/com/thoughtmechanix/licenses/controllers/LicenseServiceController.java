@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import javax.annotation.Resource;
 
+/**
+ * LicenseServiceController class contains endpoints
+ */
 @RestController
 @RequestMapping(value="v1/organizations/{organizationId}/licenses")
 public class LicenseServiceController {
