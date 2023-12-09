@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import javax.annotation.Resource;
+import java.util.Objects;
 
 /**
  * LicenseServiceController class contains endpoints
@@ -20,23 +21,25 @@ import javax.annotation.Resource;
 @RequestMapping(value="v1/organizations/{organizationId}/licenses")
 @Log4j2
 public class LicenseServiceController {
+    // some comment
     @Resource
     private LicenseService licenseService;
 
     /**
      * todo: This function is not used, but in the future will be.
+     * The function receives licenceId and saved it in to the database
      */
     @RequestMapping(value="{licenseId}",method = RequestMethod.POST)
     public String saveLicenses( @PathVariable("licenseId") String licenseId) {
-        log.info("saveLicenses started");
+        log.info("Saving licence function started");
         Assert.isNull(licenseId, "Object licenseId cannot be null");
         try{
             //someService.save(licenseId);
         } catch (Exception e){
             log.warn("licenseId was not saved");
         }
+        log.info("Saving licence function ended");
         // todo: Deleting functionality should be added.
-        log.info("saveLicenses ended");
         return String.format("REST API POST");
     }
 
