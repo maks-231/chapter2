@@ -31,7 +31,7 @@ public class LicenseServiceController {
      */
     @RequestMapping(value="{licenseId}",method = RequestMethod.POST)
     public String saveLicenses( @PathVariable("licenseId") String licenseId) {
-        log.info("saveLicenses started");
+        log.info("Saving licence function started");
         Assert.isNull(licenseId, "Object licenseId cannot be null");
         try{
             //someService.save(licenseId);
