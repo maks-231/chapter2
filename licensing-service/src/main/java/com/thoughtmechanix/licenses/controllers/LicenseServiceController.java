@@ -14,6 +14,7 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping(value="v1/organizations/{organizationId}/licenses")
 public class LicenseServiceController {
+    // some comment
     @Resource
     private LicenseService licenseService;
                                                             
